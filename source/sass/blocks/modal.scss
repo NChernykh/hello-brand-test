@@ -58,7 +58,7 @@
 
   &__content {
     position: relative;
-
+    color: $color-default-black;
     width: 600px;
     padding: 40px;
 
@@ -68,6 +68,12 @@
       width: 100%;
       padding: 20px;
     }
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 140%;
+    color: $color-default-black;
   }
 
   &__close-btn {
@@ -83,6 +89,18 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: color $trans-default;
+    }
+
+    @include hover-focus {
+      svg {
+        color: $color-calico;
+      }
+    }
   }
 
   &--responsive {

@@ -16,8 +16,8 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-placeholder;
-  color: $color-default-black;
+  font-family: $ff-poppins;
+  color: $color-default-white;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,7 +35,7 @@ body {
 }
 
 a {
-  color: $color-default-black;
+  color: $color-default-white;
   text-decoration: none;
 }
 

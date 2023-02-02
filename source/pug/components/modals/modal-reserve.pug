@@ -1,0 +1,19 @@
+mixin modal-reserve()
+
+  .modal-reserve
+    h2.modal__title Reserve a table
+    form(data-validate, data-form)
+      +custom-input(
+        { inputLabel: "Name", inputType: "text", inputName: "user-name", inputPlaceholder: "Input your name" }
+      )(data-validate-type="text")(class="modal-reserve__half")
+      +custom-input(
+        { inputLabel: "Email", inputType: "email", inputError: "incorrect adress", inputName: "user-email", inputPlaceholder: "Input your email" }
+      )(data-validate-type="email")(class="modal-reserve__half")
+      +custom-textarea(
+        { inputLabel: "Speciale Request", inputType: "text", inputName: "user-text", inputPlaceholder: "Input your speciale request" }
+      )(data-validate-type="email")(class="modal-reserve__full-width")
+
+      +btn({text: "Send", type: "submit"}).modal-reserve__btn
+
+
+

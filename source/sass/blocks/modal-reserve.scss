@@ -1,0 +1,15 @@
+.modal-reserve {
+	form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	&__half.custom-input {
+		width: 49%;
+	}
+
+	.btn {
+		background-color: $color-port-gore;
+		padding: 15px 35px;
+	}
+}

@@ -1,27 +1,71 @@
 .main-nav {
+  flex-grow: 1;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include vp-1023 {
+      display: none;
+      opacity: 0;
+      transition: opacity $trans-default;
+    
+    }
+  }
+
   &__list {
     display: flex;
     margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
+    padding-top: 10px;
+    margin-right: 30px;
     padding: 0;
-
+    flex-wrap: wrap;
     list-style: none;
   }
 
   &__item {
-    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 45px;
+
+    @include vp-1279 {
+      margin-right: 25px;
+    }
   }
 
   &__link {
     color: $color-default-white;
+    font-weight: 500;
 
     &.is-active {
-      opacity: 0.6;
+      color: $color-calico;
     }
   }
 
   &__toggle {
+    display: none;
+
+    @include vp-1023 {
+      position: absolute;
+      padding: 0;
+      top: 0;
+      right: 24px;
+      display: block;
+      cursor: pointer;
+      border: none;
+      color: $color-default-white;
+      background-color: $color-transparent;
+      transition: color $trans-default;
+
+      &__burger {
+        width: 40px;
+        height: 25px;
+      }
+    }
+  }
+
+  &__close {
     display: none;
   }
 }

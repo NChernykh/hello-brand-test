@@ -2,29 +2,36 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "#",
+        text: "À la carte"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Wijnkaart"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Lunchmenu"
+      },
+      {
+        href: "#",
+        text: "Contact"
       },
     ]
 
-  header.header(class=headerMods)
+  header.header(class=headerMods)(data-header)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        span.header__logo
+          +img("content", "logo", "png", 270, 55, "logo")
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +img("content", "logo", "png", 270, 55, "logo")
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+        button.main-nav__toggle(type="button", data-burger, aria-label="Переключатель отображения меню", aria-pressed="false")
+          +icon("icon-burger", 40, 25).main-nav__burger
+          +icon("icon-close", 30, 30).main-nav__close
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks
@@ -33,4 +40,13 @@ mixin header(headerMods, currentUrl)
                 if(activeState)
                   span.main-nav__link.is-active=link.text
                 else
-                  a.main-nav__link(href=link.href)=link.text
+                  a.main-nav__link.link(href=link.href)=link.text
+          a.header__contacts.link(href="tel:+74954816056")
+            +icon("icon-call", 20, 20)
+            span.header__tel +32 9 282 57 25 
+          ul.socials 
+            each item in socialsList
+              li.socials__item
+                a.socials__link(href="#", aria-label=item.ariaLabel, target="_blank", rel="nofollow noopener")
+                  +icon(item.icon, 24, 24)
+

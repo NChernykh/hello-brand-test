@@ -1,0 +1,5 @@
+mixin bg-block(data={})
+  - const {mods='', path, image, format, width, height, altText} = data
+  .bg-block(class=mods)&attributes(attributes)
+    .bg-block__img
+      +picture(path, image, format, width, height, altText)

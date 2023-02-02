@@ -1,26 +1,17 @@
 .btn {
   display: inline-flex;
   padding: 10px 20px;
-
   color: $color-default-white;
-
-  background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
+  transition: background-color $trans-default;
 
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
+  @include hover-focus {
+    background-color: $color-calico;
   }
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }
