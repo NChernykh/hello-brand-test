@@ -42,22 +42,31 @@ const sendForm = () => {
       });
     });
   }
-
-  function showStatusModal(message) {
-    const prevModal = document.querySelector('[data-modal="reserve"]');
-    const statusModal = document.querySelector('[data-modal="feedback"]');
-    const content = statusModal.querySelector('.modal-feedback');
-    prevModal.classList.remove('is-active');
-    statusModal.classList.add('is-active');
-    content.innerHTML = `
-			<p class="modal__title">${message}</p>
-		`;
-    setTimeout(() => {
-      statusModal.classList.remove('is-active');
-      const p = content.querySelector('p');
-      p.remove();
-    }, 3000);
-  }
 };
+
+function showStatusModal(message) {
+  const prevModal = document.querySelector('[data-modal="reserve"]');
+  const statusModal = document.querySelector('[data-modal="feedback"]');
+  const closeModalBtns = statusModal.querySelectorAll('[data-close-modal]');
+  const content = statusModal.querySelector('.modal-feedback');
+
+  prevModal.classList.remove('is-active');
+  statusModal.classList.add('is-active');
+  content.innerHTML = `
+    <p class="modal__title">${message}</p>
+  `;
+
+  closeModalBtns.forEach(item => {
+    item.addEventListener('click', () => {
+      statusModal.classList.remove('is-active');
+    });
+  });
+
+  setTimeout(() => {
+    statusModal.classList.remove('is-active');
+    const p = content.querySelector('p');
+    p.remove();
+  }, 4000);
+}
 
 export {sendForm};
