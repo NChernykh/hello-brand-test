@@ -1,6 +1,7 @@
 .events {
 	color: $color-default-black;
-	margin-top: -85px;
+	background-color: $color-default-white;
+	padding-top: 150px;
 	padding-bottom: 63px;
 	margin-bottom: 90px;
 
@@ -42,7 +43,7 @@
 
 		 @include vp-767 {
 			margin-right: 0;
-		 }
+		}
 	}
 
 	&__day {
@@ -54,7 +55,7 @@
 
 		@include vp-1023 {
 			font-size: 18px;
-		}	
+		}
 	}
 
 	&__meals {
@@ -100,7 +101,7 @@
 
 		@include vp-1023 {
 			font-size: 12px;
-		}	
+		}
 	}
 
 	&__dot {
@@ -113,14 +114,14 @@
 
 		@include vp-1023 {
 			margin-right: 6px;
-		}	
+		}
 
 		&--first {
 			margin-left: 12px;
 
 			@include vp-1023 {
 				margin-left: 6px;
-			}	
+			}
 		}
 	}
 
@@ -168,11 +169,11 @@
 
 			@include vp-1023 {
 				padding-top: 100px;
-			}	
+			}
 
 			@include vp-767 {
 				padding-top: 60px;
-			}	
+			}
 		}
 
 		@include vp-1279 {

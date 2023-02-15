@@ -21,11 +21,7 @@
     flex-wrap: wrap;
     list-style: none;
   }
-
-  &__item {
-    margin-bottom: 10px;
-  }
-
+  
   &__item:not(:last-child) {
     margin-right: 45px;
 

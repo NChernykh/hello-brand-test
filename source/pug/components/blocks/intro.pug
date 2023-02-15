@@ -11,7 +11,7 @@ mixin intro()
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
     .container
-      p.intro__text OPEN EVERYDAY 6AM - 9PM
+      p.intro__text OPEN EVERYDAY 6AM - <span class='intro__time'>9</span>PM
       h2.intro__title A&nbsp;bad day with lunch is&nbsp;better than a&nbsp;good day without&nbsp;it.
       .intro__btns
         +btn({isLink: false, text: "Reserve a table"})(class=`intro__btn`)(data-open-modal="reserve")

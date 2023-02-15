@@ -5,6 +5,7 @@ import {CustomSelect} from './modules/select/custom-select';
 import {initSlider} from './modules/init-slider';
 import {manageMobileMenu} from './modules/init-mobile-menu';
 import {sendForm} from './modules/send-form';
+import './modules/gsap-animation';
 
 // ---------------------------------
 

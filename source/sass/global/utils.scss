@@ -13,7 +13,15 @@
   }
 
   main {
-    flex-grow: 1;
+    // flex-grow: 1;
+    height: 100vh;
+    width: 300vw;
+    display: flex;
+
+    section {
+      height: 100%;
+      width: 100vw;
+    }
   }
 }
 
