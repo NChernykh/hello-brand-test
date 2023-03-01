@@ -1,25 +1,12 @@
 .events {
 	color: $color-default-black;
 	background-color: $color-default-white;
-	padding-top: 150px;
-	padding-bottom: 63px;
-	margin-bottom: 90px;
-
-	@include vp-1279 {
-		margin-top: -50px;
-		padding-bottom: 20px;
-		margin-bottom: 60px;
-	}
+	padding-top: 50px;
+	padding-bottom: 140px;
 
 	@include vp-1023 {
-		margin-top: -50px;
-		padding-bottom: 0;
-		margin-bottom: 40px;
-	}
-
-	@include vp-767 {
-		padding-bottom: 40px;
-		margin-top: -10px;
+		padding-top: 0;
+		padding-bottom: 80px;
 	}
 
 	.container {
@@ -73,6 +60,11 @@
 
 		@include vp-1279 {
 			max-width: 425px;
+		}
+
+		@include vp-767 {
+			max-width: 90%;
+			margin: 0 auto;
 		}
 	}
 
@@ -129,6 +121,10 @@
 		display: flex;
 		position: relative;
 
+		@include vp-767 {
+			justify-content: center;
+		}
+
 		&::after {
 			position: absolute;
 			content: "";
@@ -137,7 +133,6 @@
 			border: 1px solid $color-calico;
 			top: 50px;
     	left: 97px;
-			z-index: -1;
 
 			@include vp-1279 {
 				width: 330px;
@@ -162,6 +157,7 @@
 	&__decor-img {
 		width: 323px;
 		height: 486px;
+		z-index: 1;
 
 		&--1 {
 			margin-right: 22px;

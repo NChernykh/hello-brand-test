@@ -8,6 +8,7 @@
   width: 100%;
   z-index: -1;
   background-color: $color-port-gore;
+  overflow: hidden;
 
   &__img {
     height: 100%;

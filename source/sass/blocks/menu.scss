@@ -1,0 +1,83 @@
+.menu {
+  padding-top: 110px;
+  padding-bottom: 50px;
+
+  @include vp-1023 {
+    padding-top: 70px;
+  }
+
+  .container {
+    @include vp-1279 {
+      padding: 0 100px;
+    }
+
+    @include vp-767 {
+      padding: 0 16px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+
+  &__row.reverse {
+    flex-direction: row-reverse;
+
+    .menu__text {
+      margin-right: 0;
+      margin-left: 30px;
+    }
+  }
+
+  &__text {
+    max-width: 40%;
+    margin-right: 30px;
+
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 88px;
+    color: $color-default-black;
+
+    @include vp-1023 {
+      font-size: 24px;
+      line-height: 33px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -55px;
+      width: 108px;
+      height: 2px;
+      background-color: $color-calico;
+
+      @include vp-1023 {
+        bottom: -10px;
+        left: -40px;
+        width: 80px;
+      }
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    color: $color-gray;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+}

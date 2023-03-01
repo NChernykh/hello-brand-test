@@ -1,13 +1,9 @@
 .reviews {
 	background-color: $color-port-gore;
-	padding: 220px 0;
+	padding: 150px 0;
 
-	@include vp-1279 {
-		padding: 150px 0;
-	}
-
-	@include vp-1279 {
-		padding: 50px 0;
+	@include vp-1023 {
+		padding: 100px 0;
 	}
 
 	&__slider {

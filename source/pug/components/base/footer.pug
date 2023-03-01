@@ -1,3 +1,8 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
+      ul.socials 
+        each item in socialsList
+          li.socials__item
+            a.socials__link(href="#", aria-label=item.ariaLabel, target="_blank", rel="nofollow noopener")
+              +icon(item.icon, 24, 24)
