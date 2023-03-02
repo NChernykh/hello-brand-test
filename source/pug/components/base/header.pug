@@ -19,7 +19,7 @@ mixin header(headerMods, currentUrl)
       },
     ]
 
-  header.header(class=headerMods)(data-header)
+  header.header(class=headerMods data-header)
     .container
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href

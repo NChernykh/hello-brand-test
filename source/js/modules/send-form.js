@@ -1,5 +1,5 @@
 const sendForm = () => {
-  const mainForm = document.querySelector('[data-form]');
+  const mainForms = document.querySelectorAll('[data-form]');
 
   const message = {
     loading: 'img/svg/spinner.svg',
@@ -41,7 +41,9 @@ const sendForm = () => {
     });
   }
 
-  bindPostData(mainForm);
+  mainForms.forEach((item) => {
+    bindPostData(item);
+  });
 };
 
 function showStatusModal(message) {

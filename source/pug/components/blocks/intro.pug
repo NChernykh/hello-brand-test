@@ -8,13 +8,11 @@ mixin intro()
       height: 901,
       altText: "Интерьер ресторана",
     })
-    //- вставлять блоки во внешний контейнер неверно
-    //- все блоки содержат в себе container без доп класса tutorial__wrapper
     .container
       p.intro__text OPEN EVERYDAY 6AM - 9PM
       h2.intro__title A&nbsp;bad day with lunch is&nbsp;better than a&nbsp;good day without&nbsp;it.
       .intro__btns
-        +btn({isLink: false, text: "Reserve a table"})(class=`intro__btn`)(data-open-modal="reserve")
+        +btn({isLink: false, text: "Reserve a table"})(class="intro__btn" data-open-modal="reserve")
         ul.socials
           each item in socialsList
             li.socials__item
