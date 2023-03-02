@@ -1,0 +1,31 @@
+mixin contacts()
+  section.contacts
+    .container.contacts__container
+        .contacts__col.contacts__col--info
+          .contacts__row.contacts__row--link
+            span.contacts__label Phone Number
+            a.link(href="tel:+3292825725")
+              span.contacts__icon
+                +icon("icon-call", 20, 20)
+              span.contacts__tel +32 9 282 57 25
+          .contacts__row.contacts__row--link
+            span.contacts__label Email
+            a.link(href="mailto:info@email.com")
+              span.contacts__icon
+                +icon("icon-sms", 24, 24)
+              span.contacts__mail info@email.com
+          .contacts__row
+            span.contacts__icon
+              +icon("icon-clock", 24, 24)
+            .contacts__text
+              span.contacts__label Opening Hours
+              span.contacts__info Everyday from 6 AM - 9 PM
+          .contacts__row
+            span.contacts__icon
+              +icon("icon-map", 24, 24)
+            .contacts__text
+              span.contacts__label Map Street
+              span.contacts__info Jl. Raya Surabaya 2787
+        .contacts__col.contacts__col--form
+          h2.contacts__form-title Have any questions?
+          +form-main()

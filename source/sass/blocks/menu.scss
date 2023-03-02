@@ -20,14 +20,26 @@
     display: flex;
     margin-bottom: 30px;
     align-items: center;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
   }
 
-  &__row.reverse {
+  &__row.left {
     flex-direction: row-reverse;
+
+    @include vp-767 {
+      flex-direction: column;
+    }
 
     .menu__text {
       margin-right: 0;
       margin-left: 30px;
+
+      @include vp-767 {
+        margin-left: 0;
+      }
     }
   }
 
@@ -35,6 +47,11 @@
     max-width: 40%;
     margin-right: 30px;
 
+    @include vp-767 {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__title {

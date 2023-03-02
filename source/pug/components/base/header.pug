@@ -41,12 +41,11 @@ mixin header(headerMods, currentUrl)
                   span.main-nav__link.is-active=link.text
                 else
                   a.main-nav__link.link(href=link.href)=link.text
-          a.header__contacts.link(href="tel:+74954816056")
+          a.header__contacts.link(href="tel:+3292825725")
             +icon("icon-call", 20, 20)
-            span.header__tel +32 9 282 57 25 
-          ul.socials 
+            span.header__tel +32 9 282 57 25
+          ul.socials
             each item in socialsList
               li.socials__item
                 a.socials__link(href="#", aria-label=item.ariaLabel, target="_blank", rel="nofollow noopener")
                   +icon(item.icon, 24, 24)
-

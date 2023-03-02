@@ -1,5 +1,6 @@
 .main-nav {
   flex-grow: 1;
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -8,20 +9,19 @@
       display: none;
       opacity: 0;
       transition: opacity $trans-default;
-    
     }
   }
 
   &__list {
     display: flex;
     margin: 0;
+    padding: 0;
     padding-top: 10px;
     margin-right: 30px;
-    padding: 0;
     flex-wrap: wrap;
     list-style: none;
   }
-  
+
   &__item:not(:last-child) {
     margin-right: 45px;
 
@@ -45,7 +45,7 @@
     @include vp-1023 {
       position: absolute;
       padding: 0;
-      top: 0;
+      top: 3px;
       right: 24px;
       display: block;
       cursor: pointer;

@@ -1,150 +1,107 @@
 .reviews {
-	background-color: $color-port-gore;
-	padding: 150px 0;
+  background-color: $color-port-gore;
+  padding: 150px 0;
 
-	@include vp-1023 {
-		padding: 100px 0;
-	}
+  @include vp-1023 {
+    padding: 100px 0;
+  }
 
-	&__slider {
-		max-width: 1170px;
+  &__slider {
+    max-width: 1170px;
 
-		@include vp-1279 {
-			max-width: 960px;
-		}
-	}
+    @include vp-1279 {
+      max-width: 960px;
+    }
+  }
 
-	.container {
-		text-align: center;
-	}
+  .container {
+    text-align: center;
+  }
 
-	&__card {
-		width: 785px;
-		margin: 0 auto;
+  &__card {
+    width: 785px;
+    margin: 0 auto;
 
-		@include vp-1279 {
-			width: 700px;
-		}
-
-		@include vp-1023 {
-			width: 85%;
-		}
-
-		@include vp-767 {
-			width: 100%;
-		}
-	}
-
-	&__title {
-		margin: 34px 0 20px;
-		font-size: 36px;
-		line-height: 40px;
-		font-weight: 600;
-		color: $color-calico;
-
-		@include vp-1023 {
-			font-size: 28px;
-			line-height: 140%;
-		}
-
-		@include vp-374 {
-			margin: 20px 0 15px;
-			font-size: 18px;
-			line-height: 140%;
-		}
-	}
-
-	&__text {
-		margin-bottom: 40px;
-		font-size: 16px;
-		line-height: 40px;
-
-		@include vp-1023 {
-			font-size: 14px;
-			line-height: 140%;
-		}
-
-		@include vp-374 {
-			font-size: 12px;
-			margin-bottom: 20px;
-		}
-	}
-
-	&__name {
-		font-weight: 600;
-		font-size: 24px;
-		line-height: 40px;
-		letter-spacing: 0.245em;
-		font-style: normal;
-		color: $color-calico;
-
-		@include vp-1023 {
-			font-size: 18px;
-			line-height: 140%;
-		}
-
-		@include vp-374 {
-			font-size: 14px;
-		}
-	}
-
-	&__deco {
-		margin: 0 auto;
-		display: block;
-		width: 83px;
-		height: 58px;
-
-		@include vp-1023 {
-      width: 60px;
-			height: 45px;
+    @include vp-1279 {
+      width: 700px;
     }
 
-		@include vp-374 {
-			width: 50px;
-			height: 35px;
-		}
-	}
-
-	&__btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-		background-color: $color-transparent;
-		border: none;
-  	cursor: pointer;
+    @include vp-1023 {
+      width: 85%;
+    }
 
     @include vp-767 {
-      display: none;
-    }
-
-    svg {
-      color: $color-default-white;
-      width: 23px;
-      height: 50px;
-      transition: color $trans-default;
-    }
-
-    &:hover {
-      svg {
-        color: $color-calico;
-      }
+      width: 100%;
     }
   }
 
-	&__prev {
-    left: 0;
+  &__title {
+    margin: 34px 0 20px;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 600;
+    color: $color-calico;
 
     @include vp-1023 {
-      left: 24px;
+      font-size: 28px;
+      line-height: 140%;
+    }
+
+    @include vp-374 {
+      margin: 20px 0 15px;
+      font-size: 18px;
+      line-height: 140%;
     }
   }
 
-  &__next {
-    right: 0;
+  &__text {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 40px;
 
     @include vp-1023 {
-      right: 24px;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    @include vp-374 {
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.24em;
+    font-style: normal;
+    color: $color-calico;
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    @include vp-374 {
+      font-size: 14px;
+    }
+  }
+
+  &__deco {
+    margin: 0 auto;
+    display: block;
+    width: 83px;
+    height: 58px;
+
+    @include vp-1023 {
+      width: 60px;
+      height: 45px;
+    }
+
+    @include vp-374 {
+      width: 50px;
+      height: 35px;
     }
   }
 }

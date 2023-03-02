@@ -1,0 +1,44 @@
+.slider {
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background-color: $color-transparent;
+    border: none;
+    cursor: pointer;
+
+    @include vp-767 {
+      display: none;
+    }
+
+    svg {
+      color: $color-default-white;
+      width: 23px;
+      height: 50px;
+      transition: color $trans-default;
+    }
+
+    &:hover {
+      svg {
+        color: $color-calico;
+      }
+    }
+  }
+
+  &__btn--prev {
+    left: 0;
+
+    @include vp-1023 {
+      left: 24px;
+    }
+  }
+
+  &__btn--next {
+    right: 0;
+
+    @include vp-1023 {
+      right: 24px;
+    }
+  }
+}

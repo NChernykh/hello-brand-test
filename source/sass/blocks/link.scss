@@ -18,17 +18,9 @@
     &:not(:last-child) {
       margin-right: 10px;
     }
-
-    // &:not(:first-child) {
-    //   margin-left: size(10px);
-
-    //   @include vp--1919 {
-    //     margin-left: 10px;
-    //   }
-    // }
   }
 
   @include hover-focus {
     color: $color-calico;
   }
-}    
+}

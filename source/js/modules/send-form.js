@@ -1,13 +1,11 @@
 const sendForm = () => {
-  const form = document.querySelector('[data-form]');
+  const mainForm = document.querySelector('[data-form]');
 
   const message = {
     loading: 'img/svg/spinner.svg',
     success: 'Спасибо! Скоро мы с вами свяжемся',
     failure: 'Что-то пошло не так...',
   };
-
-  bindPostData(form);
 
   // функция отвечет за привязку постинга
   function bindPostData(form) {
@@ -17,9 +15,9 @@ const sendForm = () => {
       let statusMessage = document.createElement('img');
       statusMessage.src = message.loading;
       statusMessage.style.cssText = `
-					display: block;
-					margin: 0 auto;
-			`;
+          display: block;
+          margin: 0 auto;
+      `;
       form.insertAdjacentElement('afterend', statusMessage);
 
       const formData = new FormData(form);
@@ -42,6 +40,8 @@ const sendForm = () => {
       });
     });
   }
+
+  bindPostData(mainForm);
 };
 
 function showStatusModal(message) {
@@ -56,7 +56,7 @@ function showStatusModal(message) {
     <p class="modal__title">${message}</p>
   `;
 
-  closeModalBtns.forEach(item => {
+  closeModalBtns.forEach((item) => {
     item.addEventListener('click', () => {
       statusModal.classList.remove('is-active');
     });

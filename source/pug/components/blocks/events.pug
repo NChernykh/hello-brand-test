@@ -1,17 +1,17 @@
 mixin events()
   section.events
-    .container 
-        .events__col 
+    .container
+        .events__col
           each item in eventsData
             .events__row
               time.events__day(datetime=item.datetime)= item.day
-              .events__meals 
+              .events__meals
                 span.events__meal=item.appetizer
                 span.events__dot.events__dot--first
                 span.events__dot
                 span.events__dot
-                span.events__meal=item.mainCourse 
-        .events__col 
+                span.events__meal=item.mainCourse
+        .events__col
           .events__decor
             .events__decor-img.events__decor-img--1
               +picture("content", "interior-1", "jpg", 323, 486, "Вид на лестницу со второго этажа")

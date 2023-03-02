@@ -1,7 +1,13 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
-      ul.socials 
+      if(currentUrl === "index.html")
+        span.footer__logo
+          +img("content", "logo", "png", 270, 55, "logo")
+      else
+        a.footer__logo(href="index.html", aria-label="Переход на главную")
+          +img("content", "logo", "png", 270, 55, "logo")
+      ul.socials
         each item in socialsList
           li.socials__item
             a.socials__link(href="#", aria-label=item.ariaLabel, target="_blank", rel="nofollow noopener")

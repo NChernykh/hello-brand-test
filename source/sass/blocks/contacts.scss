@@ -1,0 +1,167 @@
+.contacts {
+  padding-bottom: 50px;
+
+  &__container {
+    display: flex;
+
+    @include vp-1023 {
+      padding: 0 32px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    &--info {
+      padding-top: 25px;
+      width: 55%;
+      margin-right: 80px;
+    }
+
+    @include vp-1023 {
+      width: 50%;
+
+      &--info {
+        padding-top: 15px;
+        margin-right: 40px;
+      }
+    }
+
+    @include vp-767 {
+      width: 100%;
+
+      &--info {
+        padding-top: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__row {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+    color: $color-night-rider;
+
+    @include vp-1023 {
+      padding-left: 50px;
+      margin-bottom: 20px;
+    }
+
+    .link {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      color: $color-night-rider;
+
+      @include vp-1023 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      @include vp-374 {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      @include hover-focus {
+        color: $color-calico;
+
+        .contacts__icon {
+          background-color: $color-default-white;
+        }
+
+        svg {
+          color: $color-calico;
+        }
+      }
+    }
+  }
+
+  &__form-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 88px;
+    color: $color-default-black;
+
+    @include vp-1023 {
+      font-size: 28px;
+      line-height: 60px;
+    }
+
+    @include vp-374 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 32px;
+
+    @include vp-374 {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__info {
+    display: block;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+
+    @include vp-1023 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include vp-374 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 63px;
+    height: 63px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 1px solid $color-calico;
+    background-color: $color-calico;
+    transition: background-color $trans-default;
+
+    @include vp-1023 {
+      width: 43px;
+      height: 43px;
+    }
+
+    svg {
+      transition: color $trans-default;
+      color: $color-default-white;
+      width: 24px;
+      height: 24px;
+
+      @include vp-1023 {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .custom-textarea {
+    width: 100%;
+  }
+}

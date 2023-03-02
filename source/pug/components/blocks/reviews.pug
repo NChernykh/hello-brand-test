@@ -1,16 +1,16 @@
 mixin reviews(data)
-	section.reviews
-		.reviews__slider.swiper(data-reviews-slider)
-			.swiper-wrapper
-				each item in reviewsData
-					.reviews__slide.swiper-slide
-						.container
-							+icon("icon-quote", 83, 58).reviews__deco
-							blockquote.reviews__card
-								h3.reviews__title=item.title 
-								p.reviews__text=item.text
-								cite.reviews__name!=item.name
-			button(type="button").reviews__btn.reviews__next
-				+icon("icon-left", 23, 50)
-			button(type="button").reviews__btn.reviews__prev
-				+icon("icon-right", 23, 50)
+  section.reviews
+    .reviews__slider.slider.swiper(data-reviews-slider)
+      .swiper-wrapper
+        each item in reviewsData
+          .reviews__slide.swiper-slide
+            .container
+              +icon("icon-quote", 83, 58).reviews__deco
+              blockquote.reviews__card
+                h3.reviews__title=item.title
+                p.reviews__text=item.text
+                cite.reviews__name!=item.name
+      button(type="button").slider__btn.slider__btn--next.reviews__next
+        +icon("icon-left", 23, 50)
+      button(type="button").slider__btn.slider__btn--prev.reviews__prev
+        +icon("icon-right", 23, 50)

@@ -27,6 +27,27 @@ const initSlider = () => {
       },
     },
   });
+
+  let swiper2 = new Swiper('[data-gallery-slider]', {
+    speed: 2000,
+    loop: true,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.gallery__next',
+      prevEl: '.gallery__prev',
+    },
+    allowTouchMove: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.15,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+      },
+    },
+  });
 };
 
 export {initSlider};

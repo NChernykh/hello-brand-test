@@ -1,0 +1,18 @@
+.form-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__half.custom-input {
+    width: 49%;
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  .btn {
+    background-color: $color-port-gore;
+    padding: 15px 35px;
+  }
+}

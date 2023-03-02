@@ -1,4 +1,37 @@
 .footer {
   padding: 40px 0;
-  background-color: $color-default-black;
+  background-color: $color-port-gore;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    @include vp-1023 {
+      width: 150px;
+    }
+
+    @include vp-767 {
+      width: 100px;
+    }
+  }
+
+  .socials {
+    @include vp-767 {
+      display: flex;
+
+      &__item:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      &__link {
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
 }

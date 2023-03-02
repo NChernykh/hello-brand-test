@@ -74,6 +74,11 @@
     font-size: 32px;
     line-height: 140%;
     color: $color-default-black;
+
+    @include vp-767 {
+      margin: 10px 0;
+      font-size: 24px;
+    }
   }
 
   &__close-btn {
@@ -89,6 +94,11 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    @include vp-374 {
+      top: 0;
+      right: 0;
+    }
 
     svg {
       width: 20px;

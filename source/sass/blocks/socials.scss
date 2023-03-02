@@ -1,30 +1,30 @@
 .socials {
-	display: flex;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-	@include vp-767 {
-		display: none;
-	}
+  @include vp-767 {
+    display: none;
+  }
 
-	&__item:not(:last-child) {
-		margin-right: 25px;
-	}
+  &__item:not(:last-child) {
+    margin-right: 25px;
+  }
 
-	&__link {
-		svg {
-			display: block;
-				width: 48px;
-				height: 48px;
-				color: $color-default-white; 
-				transition: color $trans-default;
-		}
+  &__link {
+    svg {
+      display: block;
+      width: 48px;
+      height: 48px;
+      color: $color-default-white;
+      transition: color $trans-default;
+    }
 
-		@include hover-focus {
-			svg {
-				color: $color-calico;
-			}	
-		}
-	}
+    @include hover-focus {
+      svg {
+        color: $color-calico;
+      }
+    }
+  }
 }

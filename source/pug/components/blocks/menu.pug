@@ -2,9 +2,9 @@ mixin menu(data)
   section.menu
     .container
       each item in menuData
-        .menu__row(class= item.isReverse ? "reverse" : "right")
-          .menu__text 
-            h2.menu__title= item.title 
-            p.menu__desc= item.text 
+        .menu__row(class= item.isReverse ? "left" : "right")
+          .menu__text
+            h2.menu__title= item.title
+            p.menu__desc= item.text
           .menu__img
-            +picture("content", item.img, "jpg", 670, 560, item.alt)
+            +picture("content", item.img, item.format, 670, 560, item.alt)

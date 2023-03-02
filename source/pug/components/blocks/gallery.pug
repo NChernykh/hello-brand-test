@@ -1,0 +1,17 @@
+mixin gallery(data)
+  section.gallery
+    .gallery__slider.slider.swiper(data-gallery-slider)
+      .container
+        h2.gallery__title Sfeerfoto's
+        p.gallery__text De beste manier om de sfeer te ervaren is eens langskomen.<br>In tussentijd hebben we hier alvast wat foto’s voor je klaar.
+        .gallery__slider-controls
+          button(type="button").slider__btn.slider__btn--prev.gallery__prev
+            +icon("icon-right", 23, 50)
+          button(type="button").slider__btn.slider__btn--next.gallery__next
+            +icon("icon-left", 23, 50)
+
+      .swiper-wrapper
+        each item in galleryData
+          .gallery__slide.swiper-slide
+            .gallery__img
+              +picture("slides", item.img, item.format, 970, 646, item.alt)
