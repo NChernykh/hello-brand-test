@@ -39,7 +39,7 @@ const optimizeSvg = () =>
 const optimizeJpg = () =>
   gulp
       .src('build/img/**/*.{jpg,jpeg}')
-      .pipe(imagemin([mozJpeg({quality: 90, progressive: true})]))
+      .pipe(imagemin([mozJpeg({quality: 80, progressive: true})]))
       .pipe(gulp.dest('build/img'));
 
 const optimizePng = () =>
@@ -70,7 +70,7 @@ const createWebp = () => {
   const root = '';
   return gulp
       .src(`source/img/${root}**/*.{png,jpg}`)
-      .pipe(webp({quality: 90}))
+      .pipe(webp({quality: 80}))
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
